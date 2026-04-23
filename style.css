@@ -1,6 +1,6 @@
 
 body {
-
+    margin: 20px;
 }
 
 a {
@@ -17,8 +17,27 @@ table {
     border-radius: 8px;
 }
 
-tr {
+tr, ol {
     background-color: lightgray;
+}
+
+ol {
+    display: grid;
+    list-style-position: inside;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-auto-flow: column;
+    border: 4px solid black;
+    font-size: x-large;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.data-table-dva {
+    grid-auto-flow: column;
+}
+
+main {
 }
 
 td {
@@ -26,5 +45,29 @@ td {
 }
 
 div {
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header h1, p {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    ol {
+        display: flex;
+        list-style-position: inside;
+        flex-direction: column;
+        border: 4px solid black;
+        font-size: x-large;
+        padding: 5px;
+        border-radius: 8px;
+    }
 }
