@@ -1,12 +1,39 @@
+:root {
+    /* Hlavní barvy */
+    --bg-color: #067a85;
+    --text-color-white: #ffffff;
+    --btn-bg-black: #000000;
+    --btn-hover: #252525;
+    --active-color: #7dff00;
+    --active-hover: #79ed12;
+
+    /* Gradienty */
+    --sidebar-grad-start: #30013c;
+    --sidebar-grad-end: #7940ed;
+    --main-grad-start: #1d8877;
+    --main-grad-end: #060b5c;
+
+    /* Rozměry a mezery */
+    --gap-size: 20px;
+    --padding-size: 20px;
+    --btn-radius: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 20px;
+    background: linear-gradient(to top right, var(--sidebar-grad-start), var(--sidebar-grad-end));
+    height: 100vh;
 }
 
 a {
     display: flex;
     flex-direction: column;
     padding: 15px;
+    color: var(--active-color);
 }
 
 table {
@@ -18,7 +45,7 @@ table {
 }
 
 tr, ol {
-    background-color: lightgray;
+    background-color: #353232;
 }
 
 ol {
@@ -31,6 +58,7 @@ ol {
     font-size: x-large;
     padding: 5px;
     border-radius: 8px;
+    color: var(--text-color-white);
 }
 
 .data-table-dva {
@@ -38,10 +66,11 @@ ol {
 }
 
 main {
+
 }
 
-td {
-
+td, th {
+    color: var(--text-color-white);
 }
 
 div {
@@ -54,10 +83,12 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
+    font-size: large;
 }
 
 header h1, p {
     padding: 10px;
+    color: var(--text-color-white);
 }
 
 @media (max-width: 768px) {
