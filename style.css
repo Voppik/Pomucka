@@ -4,13 +4,14 @@
     --text-color-white: #ffffff;
     --btn-bg-black: #000000;
     --btn-hover: #252525;
-    --active-color: #7dff00;
-    --active-hover: #79ed12;
+    --active-color: #77dc15;
+    --active-hover: #7aff00;
+    --background-color: #353232;
 
     /* Gradienty */
     --sidebar-grad-start: #30013c;
     --sidebar-grad-end: #7940ed;
-    --main-grad-start: #1d8877;
+    --main-grad-start: #000000;
     --main-grad-end: #060b5c;
 
     /* Rozměry a mezery */
@@ -21,30 +22,42 @@
 
 * {
     box-sizing: border-box;
+    font-size: xx-large;
 }
+
+/* Body */
 
 body {
     margin: 20px;
-    background: linear-gradient(to top right, var(--sidebar-grad-start), var(--sidebar-grad-end));
+    background: linear-gradient(to right, var(--sidebar-grad-start), var(--sidebar-grad-end));
     height: 100vh;
 }
+
+/* Odkazy */
 
 a {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: var(--active-color);
 }
+
+a:hover {
+    color: var(--active-hover);
+}
+
+/* Tabulky */
 
 table {
     border: 4px solid black;
     font-size: xx-large;
-    padding: 5px;
     background-color: black;
     border-radius: 8px;
 }
 
-tr, ol {
+tr, li{
     background-color: #353232;
 }
 
@@ -55,26 +68,27 @@ ol {
     grid-template-rows: repeat(8, auto);
     grid-auto-flow: column;
     border: 4px solid black;
+    padding: 0px;
     font-size: x-large;
-    padding: 5px;
     border-radius: 8px;
     color: var(--text-color-white);
 }
 
-.data-table-dva {
-    grid-auto-flow: column;
-}
-
-main {
-
+li {
+    border: 2px solid black;
+    padding-left: 10px;
+    text-align: left;
 }
 
 td, th {
     color: var(--text-color-white);
 }
 
-div {
+td {
+    padding-left: 8px;
 }
+
+/* Headery */
 
 header {
     display: flex;
@@ -91,6 +105,39 @@ header h1, p {
     color: var(--text-color-white);
 }
 
+/* Classy */
+
+.data-table {
+    width: 100%;
+    max-width: 350px;
+}
+
+.zpet {
+    padding: 15px;
+    background-color: var(--background-color);
+    border: 4px solid black;
+    border-radius: 8px;
+    margin-left: 25px;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.stred {
+    display: grid;
+    list-style-position: inside;
+    grid-template-columns: 3fr;
+    grid-auto-flow: column;
+    border: 4px solid black;
+    padding: 0px;
+    font-size: x-large;
+    border-radius: 8px;
+    color: var(--text-color-white);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Mobil */
+
 @media (max-width: 768px) {
     ol {
         display: flex;
@@ -98,7 +145,6 @@ header h1, p {
         flex-direction: column;
         border: 4px solid black;
         font-size: x-large;
-        padding: 5px;
         border-radius: 8px;
     }
 }
