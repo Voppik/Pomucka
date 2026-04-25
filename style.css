@@ -25,7 +25,7 @@
     font-size: xx-large;
 }
 
-/* Body */
+/* BODY */
 
 body {
     margin: 20px;
@@ -33,7 +33,7 @@ body {
     height: 100vh;
 }
 
-/* Odkazy */
+/* ODKAZY */
 
 a {
     display: flex;
@@ -48,7 +48,7 @@ a:hover {
     color: var(--active-hover);
 }
 
-/* Tabulky */
+/* TABULKY */
 
 table {
     border: 4px solid black;
@@ -88,7 +88,7 @@ td {
     padding-left: 8px;
 }
 
-/* Headery */
+/* HEADER */
 
 header {
     display: flex;
@@ -105,7 +105,7 @@ header h1, p {
     color: var(--text-color-white);
 }
 
-/* Classy */
+/* CLASS */
 
 .data-table {
     width: 100%;
@@ -136,9 +136,14 @@ header h1, p {
     max-width: 500px;
 }
 
-/* Mobil */
+/* MOBIL */
 
 @media (max-width: 768px) {
+
+    * {
+        font-size: x-large;
+    }
+
     ol {
         display: flex;
         list-style-position: inside;
